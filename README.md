@@ -2,10 +2,8 @@
 ![Tinkercad](./imagenes/imagenprincipal.PNG)
 
 
-## Integrantes 
+## Integrante 
 - Pedro Serra
-- Nicolas Sanchez 
-- Mateo Roberto
 
 
 ## Proyecto: Arduino parte 3.
