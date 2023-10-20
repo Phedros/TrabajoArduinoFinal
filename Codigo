@@ -39,6 +39,7 @@ voy a trabajar
 #define DECENA A3
 #define MOTOR 3
 #define SENSORFLEXION A4
+#define FOTODIODO A1
 
 /*
 Configuración de pines
@@ -58,6 +59,7 @@ for (int i=4; i<=6; i++)
   pinMode (DECENA, OUTPUT);
   pinMode (MOTOR, OUTPUT);
   pinMode(SENSORFLEXION, INPUT);
+  pinMode(FOTODIODO, INPUT);
   Serial.begin(9600);
 }
 
@@ -76,10 +78,41 @@ int lecturaAnteriorRestar = 1;
 int primoInicio = 1;
 int primoInicioPrevia = 0;
 
+int fotosensor = 0;
+int lecturaAnteriorFotosensor = 1;
+
 ////////////////////////////////////////////////////
 
 void loop ()
 {
+  
+  /*
+  PARTE 3 DEL EXAMEN
+  
+  Aqui agrego la variable fotosensor donde le asigno el valor de
+  la medicion del fotoiodo
+  
+  Si en algun momento el sensor sensa un valor por arriba de 100
+  se setea el contador al valor de 50 por unica vez
+  
+  Para que ocurra de nuevo este evento, el fotosensor debera
+  sensar por debajo de 1000 y luego subir por arriba de 1000
+  nuevamente
+  
+  
+  */
+  
+  fotosensor = analogRead(FOTODIODO);
+  
+  
+  Serial.println(fotosensor);
+  
+  if (fotosensor > 1000 && lecturaAnteriorFotosensor < 1000)
+  {
+  contador = 50;
+  }
+  
+  lecturaAnteriorFotosensor = fotosensor;
   
   /*
   Establecer condiciones para que se cambie a números primos.
@@ -394,7 +427,7 @@ int proximoPrimo(int contador, int pressed)
       contador = 2;
     }
     
-    if (numeroEsPrimo(contador))
+    if (numeroEsPrimo(contador) == true)
     {
       return contador;
     }
@@ -428,9 +461,6 @@ bool numeroEsPrimo(int num)
       return primo;
     }
 }
-
-
-
 
 
 

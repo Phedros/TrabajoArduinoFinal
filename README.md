@@ -59,8 +59,15 @@ De la forma que se integro este nuevo dispositivo en nuestro proyecto, es como u
 Por ejemplo:
 Si estas con el switch hacia la derecha, en donde se pueden sumar con el pulsador de a numeros NO primos, y quieres correr el switch para que se empieze a sumar de a numeros primos (switch hacia la izquierda), también tendras que aplicar una flexión de 180° en el sensor para que funcione y cambie finalmente la modalidad.
 
+### Sensor Fotoiodo
+  
+Se trata de un dispositivo que se usa para poder sensar contraste, por ejemplo un fondo blanco o un fondo negro. (Por Ejemplo en robots seguidores de lineas)
+
+En este circuito, si en algun momento el sensor sensa un valor por arriba de 100 se setea el contador al valor de 50 por unica vez
+Para que ocurra de nuevo este evento, el fotosensor debera sensar por debajo de 1000 y luego subir por arriba de 1000 nuevamente
+
 ## :robot: Link al proyecto
-- [Proyecto](https://www.tinkercad.com/things/dDXRQc7dzjw)
+- [Proyecto](https://www.tinkercad.com/things/3hVvbIxe08W-copy-of-prueba-arduino-parte-2/editel?sharecode=qrnuN5tODLlp821AcmzkxnAFB7gtEZIQAAGe-Zmddds)
 
 ---
 ### Fuentes
