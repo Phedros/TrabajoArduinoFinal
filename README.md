@@ -8,7 +8,7 @@
 - Mateo Roberto
 
 
-## Proyecto: Arduino parte 2.
+## Proyecto: Arduino parte 3.
 ![Tinkercad](./imagenes/arduinopartedos.PNG)
 
 ## Función principal
